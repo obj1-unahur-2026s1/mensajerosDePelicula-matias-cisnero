@@ -1,3 +1,5 @@
+import vehiculos.*
+
 object roberto {
     var vehiculo = bicicleta
     var peso = 80
@@ -30,17 +32,21 @@ object chuckNorris {
 }
 
 object neo {
+    var tieneCredito = true
+
+    method cargarCredito() {
+        tieneCredito = true
+    }
+
+    method agotarCredito() {
+        tieneCredito = false
+    }
+
     method peso() {
         return 0
     }
 
     method puedeLlamar() {
-        return celular.tieneCredito()
+        return tieneCredito
     }
-}
-
-//otros
-
-object celular {
-    var property tieneCredito = false
 }
