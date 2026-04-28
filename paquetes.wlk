@@ -4,7 +4,7 @@ object paquete {
     var property destino = laMatrix
     var estaPago = false
 
-    method registarPago() {
+    method registrarPago() {
         estaPago = true
     }
 
