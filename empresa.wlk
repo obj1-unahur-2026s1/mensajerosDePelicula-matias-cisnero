@@ -40,4 +40,16 @@ object mensajeria {
     method pesosTotales() {
         return mensajeros.map({m => m.peso()})
     }
+
+    method alMenosUnMensajeroPuedeEntregar(unPaquete) {
+        mensajeros.any({m => unPaquete.puedeSerEntregado(m)})
+    }
+
+    method mensajerosQuePuedenLlevar(unPaquete) {
+        mensajeros.find({m => unPaquete.puedeSerEntregado(m)})
+    }
+
+    method tieneSobrepeso() {
+        return self.pesosTotales() > 500
+    }
 }
