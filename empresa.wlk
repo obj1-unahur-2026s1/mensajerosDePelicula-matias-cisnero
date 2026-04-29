@@ -38,7 +38,7 @@ object mensajeria {
     }
 
     method pesosTotales() {
-        return mensajeros.map({m => m.peso()})
+        return mensajeros.map({m => m.peso()}).sum()
     }
 
     method alMenosUnMensajeroPuedeEntregar(unPaquete) {
