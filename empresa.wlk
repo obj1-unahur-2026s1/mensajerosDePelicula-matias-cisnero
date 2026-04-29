@@ -29,7 +29,15 @@ object mensajeria {
         return mensajeros.last()
     }
 
-    method pesoDelUltimoMensajero() {
+    method pesoUltimoMensajero() {
         return self.ultimoEmpleado().peso()
+    }
+
+    method pesoTotalDeLosMensajeros() {
+        return mensajeros.sum({m => m.peso()})
+    }
+
+    method pesosTotales() {
+        return mensajeros.map({m => m.peso()})
     }
 }
