@@ -46,7 +46,7 @@ object mensajeria {
     }
 
     method mensajerosQuePuedenLlevar(unPaquete) {
-        mensajeros.find({m => unPaquete.puedeSerEntregado(m)})
+        mensajeros.filter({m => unPaquete.puedeSerEntregado(m)})
     }
 
     method tieneSobrepeso() {
